@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:jr="https://juliusreade.com/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+	<channel>
+		<title>NeverFap Deluxe Social Feed</title>
+		<link>https://neverfapdeluxe.com/</link>
+		<description>NeverFap Deluxe Social Feed so I can aggregate to the world.</description>
+		<atom:link href="https://juliusreade.com/nfd_social_feed.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>number 1</title>
+			<link>https://cake.com</link>
+			<description>https://cake.com</description>
+			<guid isPermaLink="false">https://cake.com</guid>
+			<author>julius.reade@gmail.com (Julius Reade)</author>
+			<publishDate>Thu, 11 Jun 2020 21:00:00 +0000</publishDate>
+			<jr:tag>random tag</jr:tag>
+			<jr:tag>yolo</jr:tag>
+			<jr:hashtag>#holy moly</jr:hashtag>
+			<jr:hashtag>#kek</jr:hashtag>
+			<jr:social>FacebookText</jr:social>
+			<jr:social>TwitterText</jr:social>
+			<jr:social>TumblrText</jr:social>
+			<jr:social>RedditText</jr:social>
+			<jr:websiteLink>https://cake.com</jr:websiteLink>
+			<jr:feature_image>https://featurecakeage.com/</jr:feature_image>
+			<jr:giphy_still>https://cake.com</jr:giphy_still>
+			<jr:giphy_medium>https://cake.com</jr:giphy_medium>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.theWritersDailyNewEpisodeRedditText = exports.theNeverFapDeluxeDailyNewEpisodeRedditText = void 0;
+var feedUtil_1 = require("../curated/feedUtil");
+// THE NEVERFAP DELUXE DAILY
+exports.theNeverFapDeluxeDailyNewEpisodeRedditText = function (item) { return ("A new " + feedUtil_1.retrieveRandomAdjective() + " episode of The NeverFap Deluxe Daily has been released into the wild!\n\n" + item.castboxLink + "\n\n" + feedUtil_1.breakUpContent(item.content, 'neverfapdeluxe@gmail.com') + "\n\nAvailable on Spotify, iTunes, Castbox, Google Podcasts et al.\n\nWebsite: https://theneverfapdeluxedaily.juliusreade.com\n\nYouTube: https://www.youtube.com/channel/UCHnPAVZax7_QMufnSF8Pc9w\n\nTwitter: https://twitter.com/neverfapdeluxe\n\nFacebook: https://facebook.com/neverfapdeluxe\n\nDiscord: https://discord.gg/wKh49a6\n\nInstagram: https://instagram.com/neverfap_deluxe\n\n"); };
+// THE WRITERS DAILY
+exports.theWritersDailyNewEpisodeRedditText = function (item) { return ("A new " + feedUtil_1.retrieveRandomAdjective() + " episode of The Writer's Daily has been released into the wild!\n\n" + item.castboxLink + "\n\n" + feedUtil_1.breakUpContent(item.content, 'thewritersdailypodcast@gmail.com') + "\n\nAvailable on Spotify, iTunes, Castbox, Google Podcasts et al.\n\nWebsite: https://thewritersdaily.juliusreade.com\n\nYouTube: https://youtube.com/channel/UCHiMNZ86_zwW1RebKDcZEoQ\n\nTwitter: https://twitter.com/thewritersdaily\n\nFacebook: https://facebook.com/thewritersdaily\n\nDiscord: https://discord.gg/7QzqdP7\n\nInstagram: https://instagram.com/thewritersdaily\n\n"); };

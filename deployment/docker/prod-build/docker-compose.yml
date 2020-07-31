@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  datareade:
+    image: dottjt/datareade
+    container_name: 'datareade'
+    build:
+      context: ../../../
+      dockerfile: ./deployment/docker/prod-build/Dockerfile
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 2s
+        max_attempts: 3
+        window: 120s
+    ports:
+      - 7777:7777
+    volumes:
+    - "./logs:/app/logs"
+    - "./sqlite_databases:/app/database/sqlite_databases"
+    env_file:
+      - .env
+

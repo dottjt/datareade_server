@@ -1,0 +1,11 @@
+steps:
+
+  - name: ':docker: Update build image - Old Infrastructure'
+    command: ./scripts/docker_build-old.sh
+    agents:
+      queue: gm-dev-dflt
+
+  - name: ':docker: Update build image'
+    command: ./scripts/docker_build.sh
+    agents:
+      queue: dxp-web-dev

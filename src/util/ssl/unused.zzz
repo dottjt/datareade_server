@@ -1,0 +1,21 @@
+// serverIndex.ts
+
+https.createServer({
+  key: fs.readFileSync(path.resolve(__dirname, 'server', 'util', 'ssl', 'server.key')),
+  cert: fs.readFileSync(path.resolve(__dirname, 'server', 'util', 'ssl', 'server.cert'))
+}, app.callback()).listen(7777, () => {
+  console.log('Server started.');
+});
+
+
+// cronUtil
+
+const httpsAgent = new https.Agent({
+  rejectUnauthorized: false,
+  key: fs.readFileSync(path.resolve(__dirname, 'ssl', 'server.key')),
+  cert: fs.readFileSync(path.resolve(__dirname, 'ssl', 'server.cert'))
+});
+
+const response = await axios.get(feedUrl, { httpsAgent });
+
+
