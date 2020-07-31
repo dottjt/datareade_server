@@ -10,10 +10,10 @@ deployment/docker/prod-build/.env
 deployment/docker/prod/.env
 deployment/docker/dev/.env
 
-deployment/environent/.env
-deployment/environent/.env.local
-deployment/environent/.env.development
-deployment/environent/.env.production
+deployment/environment/.env
+deployment/environment/.env.local
+deployment/environment/.env.development
+deployment/environment/.env.production
 
 node_modules
 
