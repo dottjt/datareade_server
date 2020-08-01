@@ -1,4 +1,4 @@
-import { EpisodeData } from "../../types/episodeTypes";
+import { EpisodeData } from "@dottjt/datareade";
 import { retrieveRandomAdjective } from "../curated/feedUtil";
 
 // THE NEVERFAP DELUXE Daily

@@ -2,8 +2,10 @@ import {
   theNeverFapDeluxeDailyNewEpisodeRedditText,
   theWritersDailyNewEpisodeRedditText,
 } from '../../../messages/redditMessages';
+
 import { PodcastFeedType } from '../../feedUtil';
-import { EpisodeData } from '../../../../types/episodeTypes';
+import { EpisodeData } from '@dottjt/datareade';
+
 import RedditClient from '../../../../social/redditClient';
 
 const getRedditTitle = (item: EpisodeData, type: PodcastFeedType): string => {

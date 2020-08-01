@@ -2,10 +2,8 @@ import {
   THE_NEVERFAP_DELUXE_DAILY_PODCAST_FEED_ID
 } from '../../../const';
 
-import { episodeTNDDList } from '../../../data/tndd_episodes/index-tndd';
 import { PodcastFeedType } from '../feedUtil';
-import { EpisodeData } from '../../../types/episodeTypes';
-import { SocialFeedData } from '../../../types/feedTypes';
+import { data, EpisodeData, SocialFeedData } from '@dottjt/datareade';
 import logger from '../../../util/logger';
 
 import curatedFeedCheck10Minutes from '../../curatedFeedCheck10Minutes';
@@ -19,9 +17,11 @@ import { theNeverFapDeluxeDailyNewEpisodeTumblrText } from '../../messages/tumbl
 
 const theNeverFapDeluxeDailyPodcastFeed = async () => {
   try {
+    const { episodesTNDD } = data;
+
     const itemsToPost: (SocialFeedData|EpisodeData)[] = await curatedFeedCheck10Minutes({
       feedId: THE_NEVERFAP_DELUXE_DAILY_PODCAST_FEED_ID,
-      items: episodeTNDDList,
+      items: episodesTNDD,
     });
 
     if (itemsToPost.length > 0) {

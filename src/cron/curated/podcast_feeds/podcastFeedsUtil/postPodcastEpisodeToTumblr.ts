@@ -1,4 +1,4 @@
-import { EpisodeData } from "../../../../types/episodeTypes";
+import { EpisodeData } from "@dottjt/datareade";
 import { PodcastFeedType } from "../../feedUtil";
 import {
   theNeverFapDeluxeDailyNewEpisodeTumblrText,

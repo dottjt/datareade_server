@@ -1,0 +1,16 @@
+env:
+steps:
+
+  - label: ':docker: Build Docker Image'
+    command: docker-compose -f ./deployment/docker/prod-build/docker-compose.yml build --no-cache
+
+  - wait
+
+  - label: ':docker: Push Docker Image'
+    command: docker push dottjt/datareade
+
+  - wait
+
+  # TODO I'm not sure how to do this. Like, what todo.
+  - label: ':docker: Pull Docker Image'
+    command: docker push dottjt/datareade

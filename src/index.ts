@@ -30,8 +30,8 @@ import setupNFDCron from './NFDcron';
 // import axios from 'axios';
 // import { selectRandomPost } from './util/util';
 
-import theNeverFapDeluxeDailyPodcastFeed from './cron/curated/podcast_feeds/theNeverFapDeluxeDailyPodcastFeed';
-import theWritersDailyPodcastFeed from './cron/curated/podcast_feeds/theWritersDailyPodcastFeed';
+// import theNeverFapDeluxeDailyPodcastFeed from './cron/curated/podcast_feeds/theNeverFapDeluxeDailyPodcastFeed';
+// import theWritersDailyPodcastFeed from './cron/curated/podcast_feeds/theWritersDailyPodcastFeed';
 
 // Main
 const main = async () => {
@@ -46,8 +46,8 @@ const main = async () => {
   await setupCron();
   await setupNFDCron();
 
-  theNeverFapDeluxeDailyPodcastFeed();
-  theWritersDailyPodcastFeed();
+  // theNeverFapDeluxeDailyPodcastFeed();
+  // theWritersDailyPodcastFeed();
 
   // const socialClients = await theWritersDailyPodcastClient();
 

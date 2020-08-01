@@ -1,6 +1,6 @@
 import { MessageEmbed } from 'discord.js';
 import { PodcastFeedType } from '../../feedUtil';
-import { EpisodeData } from '../../../../types/episodeTypes';
+import { EpisodeData } from '@dottjt/datareade';
 import {
   theNeverFapDeluxeDailyNewEpisodeDiscordEmbed,
   theWritersDailyNewEpisodeDiscordEmbed

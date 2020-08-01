@@ -1,4 +1,4 @@
-import { EpisodeData } from "../../types/episodeTypes";
+import { EpisodeData } from "@dottjt/datareade";
 
 // THE NEVERFAP DELUXE Daily
 

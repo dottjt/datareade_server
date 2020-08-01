@@ -21,6 +21,6 @@ services:
     volumes:
     - "./logs:/app/logs"
     - "./sqlite_databases:/app/database/sqlite_databases"
-    env_file:
-      - .env
+    # env_file:
+    #   - .env
 

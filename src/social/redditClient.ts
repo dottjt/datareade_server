@@ -1,5 +1,5 @@
 import SnooWrap, { Submission, Comment } from 'snoowrap';
-import { RedditListingOptions } from '../types/utilTypes';
+import { RedditListingOptions } from '@dottjt/datareade';
 import logger from '../util/logger';
 
 const redditClient = new SnooWrap({

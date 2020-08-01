@@ -2,9 +2,7 @@ import {
   THE_WRITERS_DAILY_PODCAST_FEED_ID
 } from '../../../const';
 
-import { EpisodeData } from '../../../types/episodeTypes';
-import { SocialFeedData } from '../../../types/feedTypes';
-import { episodeTWDList } from '../../../data/twd_episodes/index-twd';
+import { data, EpisodeData, SocialFeedData } from '@dottjt/datareade';
 import logger from '../../../util/logger';
 
 import curatedFeedCheck10Minutes from '../../curatedFeedCheck10Minutes';
@@ -18,9 +16,11 @@ import postPodcastEpisodeToTwitter from './podcastFeedsUtil/postPodcastEpisodeTo
 import { theWritersDailyPodcastClient } from '../../../social/clientUtil';
 
 const theWritersDailyPodcastFeed = async () => {
+  const { episodesTWD } = data;
+
   const itemsToPost: (SocialFeedData|EpisodeData)[] = await curatedFeedCheck10Minutes({
     feedId: THE_WRITERS_DAILY_PODCAST_FEED_ID,
-    items: episodeTWDList
+    items: episodesTWD
   });
 
   if (itemsToPost.length > 0) {

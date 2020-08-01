@@ -1,4 +1,4 @@
-import { SocialFeedType, SocialFeedData } from '../../../types/feedTypes';
+import { SocialFeedType, SocialFeedData } from '@dottjt/datareade';
 import TwitterClient from "../../../social/twitterClient";
 import RedditClient from "../../../social/redditClient";
 import DiscordClient from "../../../social/discordClient";

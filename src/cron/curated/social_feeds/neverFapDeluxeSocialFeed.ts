@@ -2,19 +2,19 @@ import {
   NEVERFAP_DELUXE_SOCIAL_FEED_ID
 } from '../../../const';
 
-import { EpisodeData } from '../../../types/episodeTypes';
-import { SocialFeedData, SocialFeedType } from '../../../types/feedTypes'
+import { data, EpisodeData, SocialFeedData, SocialFeedType } from '@dottjt/datareade';
 
 import curatedFeedCheck10Minutes from '../../curatedFeedCheck10Minutes';
 
-import { feedSocialNFDList } from '../../../data/feeds/nfdSocialFeed';
 import sendSocialFeedData from './socialFeedsUtil';
 import { neverFapDeluxeSocialClient } from '../../../social/clientUtil';
 
 const neverFapDeluxeSocialFeed = async () => {
+  const { feedSocialNFD } = data;
+
   const itemsToPost: (SocialFeedData|EpisodeData)[] = await curatedFeedCheck10Minutes({
     feedId: NEVERFAP_DELUXE_SOCIAL_FEED_ID,
-    items: feedSocialNFDList,
+    items: feedSocialNFD,
   });
 
   if (itemsToPost.length > 1) {

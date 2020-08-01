@@ -1,9 +1,6 @@
-import { v4 as uuidv4 } from 'uuid';
-
-import { CuratedFeedDBItem, SocialFeedData } from '../types/feedTypes';
+import { EpisodeData, CuratedFeedDBItem, SocialFeedData } from '@dottjt/datareade';
 
 import knexFeed from '../util/dbConnectors/knexFeed';
-import { EpisodeData } from '../types/episodeTypes';
 
 const addNewItemsToDB = async (itemsArray: (SocialFeedData|EpisodeData)[], feedId: string): Promise<void> => {
   for (const item of itemsArray) {

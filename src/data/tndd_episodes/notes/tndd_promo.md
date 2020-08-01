@@ -1,4 +1,0 @@
-- Starting a new podcast
-- I wanted it to be like a quick 5 - 10 minute life coach session
-- To start your day. To motivate you.
-- It's called The Writer's Daily
