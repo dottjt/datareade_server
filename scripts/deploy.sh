@@ -6,6 +6,8 @@ CLIENT_ROOT_FOLDER=/Users/julius.reade/Code/PER/datareade_server
 cp $CLIENT_ROOT_FOLDER/deployment/environment/.env $CLIENT_ROOT_FOLDER/deployment/docker/prod-build/.env
 cd $CLIENT_ROOT_FOLDER/deployment/docker/prod-build
 
+npm run update
+
 docker-compose build --no-cache
 docker push dottjt/datareade
 
