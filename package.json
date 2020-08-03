@@ -94,7 +94,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run start:package:prod && git add .",
+      "pre-commit": "",
       "pre-push": ""
     }
   },
