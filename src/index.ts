@@ -14,6 +14,10 @@ import logger from 'koa-logger';
 import serve from 'koa-static';
 import session from 'koa-session';
 
+// Logging Data
+import ourLogger from './util/logger';
+import { data } from '@dottjt/datareade';
+
 // Routes
 import example from './routes/example';
 import {
@@ -33,6 +37,7 @@ import setupNFDCron from './NFDcron';
 // import theNeverFapDeluxeDailyPodcastFeed from './cron/curated/podcast_feeds/theNeverFapDeluxeDailyPodcastFeed';
 // import theWritersDailyPodcastFeed from './cron/curated/podcast_feeds/theWritersDailyPodcastFeed';
 
+
 // Main
 const main = async () => {
   const app = new Koa();
@@ -46,10 +51,11 @@ const main = async () => {
   await setupCron();
   await setupNFDCron();
 
+  ourLogger.info(`${data.episodesTNDD[data.episodesTNDD.length - 1].title} - ${data.episodesTNDD[data.episodesTNDD.length - 1].date.split('T')[0]}`);
+  ourLogger.info(`${data.episodesTWD[data.episodesTWD.length - 1].title} - ${data.episodesTWD[data.episodesTWD.length - 1].date.split('T')[0]}`);
+
   // theNeverFapDeluxeDailyPodcastFeed();
   // theWritersDailyPodcastFeed();
-
-  // const socialClients = await theWritersDailyPodcastClient();
 
   app.keys = [process.env.SIGNING_COOKIE_KEYS as string];
 

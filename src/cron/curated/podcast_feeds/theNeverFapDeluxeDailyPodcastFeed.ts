@@ -2,7 +2,6 @@ import {
   THE_NEVERFAP_DELUXE_DAILY_PODCAST_FEED_ID
 } from '../../../const';
 
-import { PodcastFeedType } from '../feedUtil';
 import { data, EpisodeData, SocialFeedData } from '@dottjt/datareade';
 import logger from '../../../util/logger';
 
@@ -23,9 +22,6 @@ const theNeverFapDeluxeDailyPodcastFeed = async () => {
       feedId: THE_NEVERFAP_DELUXE_DAILY_PODCAST_FEED_ID,
       items: episodesTNDD,
     });
-    
-    logger.info(`Latest NFDD episode: ${episodesTNDD[episodesTNDD.length - 1].title}`);
-    logger.info('itemsToPost.length', itemsToPost.length);
 
     if (itemsToPost.length > 0) {
       // const type = PodcastFeedType.TheNeverFapDeluxeDaily;
@@ -33,7 +29,8 @@ const theNeverFapDeluxeDailyPodcastFeed = async () => {
       const socialClients = await theNeverFapDeluxePodcastClient();
 
       logger.info('There are TNDD Podcast items to post!');
-      logger.info({item: itemsToPost[0].toString()});
+      // logger.info({item: itemsToPost[0].toString()});
+
       for (const item of itemsToPost) {
         const episodeItem = item as EpisodeData;
 

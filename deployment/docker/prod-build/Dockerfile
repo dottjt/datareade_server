@@ -23,4 +23,4 @@ COPY . .
 
 EXPOSE 7777
 
-CMD [ "npm", "run", "start:server:prod" ]
+CMD [ "npm", "run", "start:prod" ]
