@@ -1,13 +1,6 @@
 # datareade
 
-This is the server. Test. Test. Lest. Jest. Yest. change. chaeg. trsthank you sir
-
-### TODO
-
-- when checking for new content, only add / compare content from TODAY onwards. Past publish dates are absolutely not relevant for the database to have/compare to. It serves you function.
-- have a notes section (just for you personally so you know what is going on)
-- Work on script for uploading (automatically fetch url and share), as well as when uploading, to populate fields based on audio file name.
-- NeverFap Deluxe #accountability Thread Pool - 05-06-27
+This is the server.
 
 ### Server
 

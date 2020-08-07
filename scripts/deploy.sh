@@ -8,6 +8,10 @@ cd $CLIENT_ROOT_FOLDER/deployment/docker/prod-build
 
 npm run update
 
+git add .
+git commit -m 'automated commit'
+git push
+
 docker-compose build --no-cache
 docker push dottjt/datareade
 

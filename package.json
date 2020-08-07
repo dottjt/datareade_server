@@ -7,7 +7,7 @@
     "-- -- -- -- SERVER SCRIPTS -- -- -- -- ": "--",
     "start:local": "NODE_ENV=local npm run knex:reset:local && npm run update && NODE_ENV=local npx ts-node-dev ./src/index.ts --respawn --transpileOnly",
     "start:dev": "NODE_ENV=development npm run knex:reset:dev && npm run update && NODE_ENV=development npx ts-node ./src/index.ts",
-    "start:prod": "NODE_ENV=production npm run knex:migrate:prod && npm run update && NODE_ENV=production npx ts-node ./src/index.ts",
+    "start:prod": "NODE_ENV=production npm run knex:migrate:prod && NODE_ENV=production npx ts-node ./src/index.ts",
     "-- -- -- -- DATABASE SCRIPTS DEV -- -- -- -- ": "--",
     "knex:reset:dev": "NODE_ENV=development npm run knex:rollback:dev && npm run knex:migrate:dev && npx knex --knexfile ./database/knexfile.ts seed:run",
     "knex:rollback:dev": "NODE_ENV=development npx knex --knexfile ./database/knexfile.ts migrate:rollback --all",
@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/dottjt/datareade#readme",
   "dependencies": {
-    "@dottjt/datareade": "^1.1.56",
+    "@dottjt/datareade": "^1.1.57",
     "@koa/cors": "^3.1.0",
     "@koa/router": "^9.0.1",
     "@types/fs-extra": "^8.1.1",
