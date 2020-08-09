@@ -3,14 +3,14 @@
 SERVER_ROOT_FOLDER=/docker/letsencrypt-docker-nginx/src/datareade
 CLIENT_ROOT_FOLDER=/Users/julius.reade/Code/PER/datareade_server
 
+git add .
+git commit -m 'automated commit'
+git push
+
 cp $CLIENT_ROOT_FOLDER/deployment/environment/.env $CLIENT_ROOT_FOLDER/deployment/docker/prod-build/.env
 cd $CLIENT_ROOT_FOLDER/deployment/docker/prod-build
 
 npm run update
-
-git add .
-git commit -m 'automated commit'
-git push
 
 docker-compose build --no-cache
 docker push dottjt/datareade

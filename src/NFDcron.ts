@@ -16,6 +16,7 @@ import {
   nfdGuidePlug,
   donatePlug,
   summaryPlug,
+  nfdBiblePlug,
   freePlug,
   hoveringPlug
 } from './NFDcronUtil';
@@ -43,7 +44,7 @@ const setupNFDCron = async () => {
   cron.schedule('30 16 * * THU', async () => { await discordPlug() }, cronOptions);
 
   // Friday
-  // cron.schedule('30 0 * * FRI', async () => { await }, cronOptions);
+  cron.schedule('30 0 * * FRI', async () => { await nfdBiblePlug() }, cronOptions);
   cron.schedule('30 9 * * FRI', async () => { await summaryPlug() }, cronOptions);
   cron.schedule('30 16 * * FRI', async () => { await facebookPlug() }, cronOptions);
 

@@ -150,6 +150,22 @@ export const summaryPlug = async () => {
   }
 };
 
+export const nfdBiblePlug = async () => {
+  try {
+    const postTitle = `The NeverFap Deluxe Bible. Available In PDF/EPUB Format. Download It Free Today!`;
+    const postUrl = `https://neverfapdeluxe.com/ebooks/neverfap-deluxe-bible.pdf`;
+
+    await submitPost(postTitle, postUrl, [
+      SubmitPostType.Twitter,
+      SubmitPostType.Reddit,
+      SubmitPostType.Discord,
+      SubmitPostType.Tumblr,
+    ]);
+  } catch (err) {
+    throw new Error(`${err} - NFD Bible Plug`);
+  }
+};
+
 export const donatePlug = async () => {
   try {
     const postTitle = `Would You Like To Make A Small Donation To NeverFap Deluxe? This Initiative Is 100% Free And Your Financial Support Is Greatly Appreciated!`;
@@ -264,7 +280,7 @@ export const mobileAppPlug = async () => {
 
 export const websitePlug = async () => {
   try {
-    const postTitle = 'Please don\'t forget to checkout the website! It literally explains everything you could possibly want to know about your recovery!';
+    const postTitle = 'Please don\'t forget to checkout the website! It explains literally everything you could possibly want to know about your recovery!';
     const postUrl = 'https://neverfapdeluxe.com';
 
     await submitPost(postTitle, postUrl, [
