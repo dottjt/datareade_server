@@ -4,7 +4,7 @@ This is the server.
 
 ### Server
 
-The server requires a lot more work, but that's just the nature of it.
+The server requires a lot more work, but that's just the nature of it. Hello there
 
 ### Step 0. Remove need to use password to access server
 https://www.hongkiat.com/blog/ssh-to-server-without-password/
