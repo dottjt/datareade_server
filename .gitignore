@@ -6,6 +6,8 @@ dist
 dist-esm
 src/util/output
 
+database/sqlite_databases
+
 deployment/docker/prod-build/.env
 deployment/docker/prod/.env
 deployment/docker/dev/.env
