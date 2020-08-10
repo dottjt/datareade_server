@@ -1,6 +1,4 @@
 const path = require('path');
-const { config } = require('dotenv');
-config({ path: path.resolve(__dirname, '..', 'deployment', 'environment', '.env') });
 
 module.exports = {
   local: {

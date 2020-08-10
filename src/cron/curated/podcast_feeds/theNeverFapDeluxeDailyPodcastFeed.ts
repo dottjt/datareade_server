@@ -23,6 +23,7 @@ const theNeverFapDeluxeDailyPodcastFeed = async () => {
       items: episodesTNDD,
     });
 
+    console.log('itemsToPost', itemsToPost);
     if (itemsToPost.length > 0) {
       // const type = PodcastFeedType.TheNeverFapDeluxeDaily;
 
