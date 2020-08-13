@@ -34,8 +34,8 @@ import setupNFDCron from './NFDcron';
 // import axios from 'axios';
 // import { selectRandomPost } from './util/util';
 
-// import theNeverFapDeluxeDailyPodcastFeed from './cron/curated/podcast_feeds/theNeverFapDeluxeDailyPodcastFeed';
-// import theWritersDailyPodcastFeed from './cron/curated/podcast_feeds/theWritersDailyPodcastFeed';
+import theNeverFapDeluxeDailyPodcastFeed from './cron/curated/podcast_feeds/theNeverFapDeluxeDailyPodcastFeed';
+import theWritersDailyPodcastFeed from './cron/curated/podcast_feeds/theWritersDailyPodcastFeed';
 
 
 // Main
@@ -54,8 +54,8 @@ const main = async () => {
   ourLogger.info(`${data.episodesTNDD[data.episodesTNDD.length - 1].title} - ${data.episodesTNDD[data.episodesTNDD.length - 1].date.split('T')[0]}`);
   ourLogger.info(`${data.episodesTWD[data.episodesTWD.length - 1].title} - ${data.episodesTWD[data.episodesTWD.length - 1].date.split('T')[0]}`);
 
-  // theNeverFapDeluxeDailyPodcastFeed();
-  // theWritersDailyPodcastFeed();
+  theNeverFapDeluxeDailyPodcastFeed();
+  theWritersDailyPodcastFeed();
 
   app.keys = [process.env.SIGNING_COOKIE_KEYS as string];
 
